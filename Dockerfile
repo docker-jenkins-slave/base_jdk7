@@ -22,8 +22,8 @@ RUN apt-get update && \
 
 # as per https://developer.android.com/sdk/index.html#Requirements
 # install Oracle java 7 
-RUN apt-get update && apt-get install -y software-properties-common && \
-#apt-get -y install software-properties-common && \
+RUN apt-get update && \
+    apt-get install -y software-properties-common && \
     add-apt-repository -y ppa:webupd8team/java && \
     apt-get update && \
     echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
